@@ -1,0 +1,47 @@
+git clone ssh://user@host/path/to/repo.git
+
+git status
+git add <file>
+git commit
+
+git push origin master
+
+
+git pull --rebase origin master
+
+//edit the files in conflict and then do:
+git add <edited-files>
+git rebase --continue
+
+//in case you got problems:
+git rebase --abort
+
+//if all is ok
+git push origin master
+
+
+//Featurs:
+git checkout -b my-features master
+
+...
+git push -u origin my-geatures
+
+//now when doing push it will go to my-fatures branch
+git push
+
+//to merge it to master:
+git checkout master
+git pull
+//now lets merge my-features in to master:
+git pull origin my-fatures
+
+//in the ned we just push to master again:
+git push
+
+
+//to check log:
+git log --graph
+
+//to amend:
+git commit --amend --no-edit
+
